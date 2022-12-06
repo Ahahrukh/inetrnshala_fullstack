@@ -3,6 +3,7 @@ const app=express()
 const connection=require('./config/connection')
 const userRouter=require('./routes/user.route')
 const jobRouter=require("./routes/job.route")
+const myjobRouter = require('./routes/student.route')
 app.use(express.json())
 
 app.get("/",(req,res)=>{
@@ -10,6 +11,7 @@ app.get("/",(req,res)=>{
 })
 app.use("/user",userRouter)
 app.use("/admin",jobRouter)
+app.use("/myjob",myjobRouter)
 app.listen(4000,async()=>{
     try{
       await connection
