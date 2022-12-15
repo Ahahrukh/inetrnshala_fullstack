@@ -4,6 +4,7 @@ const connection=require('./config/connection')
 const userRouter=require('./routes/user.route')
 const jobRouter=require("./routes/job.route")
 const myjobRouter = require('./routes/student.route')
+const resumeRouter = require('./routes/resume.route')
 app.use(express.json())
 
 app.get("/",(req,res)=>{
@@ -12,6 +13,9 @@ app.get("/",(req,res)=>{
 app.use("/user",userRouter)
 app.use("/admin",jobRouter)
 app.use("/myjob",myjobRouter)
+app.use("/user_up",resumeRouter)
+app.use('/user_up', express.static('./resume'));
+
 app.listen(4000,async()=>{
     try{
       await connection

@@ -1,9 +1,10 @@
 const express=require('express')
+const authentication = require('../middleware/authentication')
 const myjobRouter=express.Router()
 const jobModel=require('../models/jobs.model')
 const myjobModel = require('../models/myjob.model')
 
-myjobRouter.post("/apply/:id",async(req,res)=>{
+myjobRouter.post("/apply/:id",authentication,async(req,res)=>{
     let {id}=req.params
     let jobmodel=await jobModel.find({"_id":id})
     
