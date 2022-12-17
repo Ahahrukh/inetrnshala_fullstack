@@ -1,0 +1,22 @@
+.main{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-around;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.second{
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+}
+.first{
+    width: 30%;
+}
+select{
+    border: none;
+   
+}
