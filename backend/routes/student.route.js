@@ -1,10 +1,11 @@
 const express=require('express')
 const authentication = require('../middleware/authentication')
+const authorisation = require('../middleware/autherisation')
 const myjobRouter=express.Router()
 const jobModel=require('../models/jobs.model')
 const myjobModel = require('../models/myjob.model')
 
-myjobRouter.post("/apply/:id",authentication,async(req,res)=>{
+myjobRouter.post("/apply/:id",authentication,authorisation(["student"]),async(req,res)=>{
     let {id}=req.params
     let jobmodel=await jobModel.find({"_id":id})
     
@@ -20,6 +21,9 @@ myjobRouter.post("/apply/:id",authentication,async(req,res)=>{
     }
 })
 
-
+myjobRouter.get("/aplied",authentication,authorisation(["student"]),async(req,res)=>{
+    let jobs=await myjobModel.find()
+    return res.send(jobs)
+})
 
 module.exports=myjobRouter

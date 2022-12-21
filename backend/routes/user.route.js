@@ -12,10 +12,10 @@ userRouter.post("/register",async (req,res)=>{
 
 userRouter.post("/login",async(req,res)=>{
     const {email,password}=req.body
-    const x=await userModel.find({email})
-     if(x[0].password===password){
-        var t = jwt.sign({ foo: 'bar' }, 'shhhhh');
-        res.send({"token":t,"Role":x[0].role})
+    const x=await userModel.findOne({email})
+     if(x.password===password){
+        var t = jwt.sign({ email: x.email}, 'shhhhh');
+        res.send({"token":t,"Role":x.role})
      }
      
 
