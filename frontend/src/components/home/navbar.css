@@ -19,4 +19,34 @@
 select{
     border: none;
    
+   
+}
+.second>div{
+    font-family: 'Inter var',sans-serif;
+    font-weight: 500;
+}
+.login{
+    width: 80px;
+    height: 30px;
+    border: 1px solid rgb(41, 183, 226);
+    border-radius: 4px;
+    background-color: white;
+    font-size:16px;
+    color: rgb(41, 183, 226);
+    font-family: 'Inter var',sans-serif;
+}
+.reg{
+    width: 120px;
+    height: 30px;
+    border: 1px solid rgb(41, 183, 226);
+    border-radius: 4px;
+    background-color: rgb(41, 183, 226);
+    font-size:14px;
+    color: white;
+    font-family: 'Inter var',sans-serif;
+    
+}
+.reg>select{
+    background-color: rgb(41, 183, 226);
+    color: white;
 }

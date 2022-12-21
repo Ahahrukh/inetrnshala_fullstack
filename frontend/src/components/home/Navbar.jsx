@@ -27,15 +27,30 @@ const Navbar = () => {
                 <option value=""></option>
             </select>
         </div>
-        <div>Certification Course</div>
-        <div>jobs</div>
-        <div>
-            <button>login</button>
+        <div>Certification Course
+            <select  >
+                <option value=""></option>
+            </select>
+        </div>
+        <div>jobs
+            <select  >
+                <option value=""></option>
+            </select>
         </div>
         <div>
-            <button>register</button>
+            <button className='login'>Login</button>
+        </div>
+        <div>
+            <button className='reg'>Register
+                <select  >
+                    <option value=""></option>
+                </select>
+            </button>
         </div>
     </div>
+
+
+    
    </div>
   )
 }
