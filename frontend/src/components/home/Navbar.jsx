@@ -42,9 +42,7 @@ const Navbar = () => {
         </div>
         <div>
             <button className='reg'>Register
-                <select  >
-                    <option value=""></option>
-                </select>
+               
             </button>
         </div>
     </div>

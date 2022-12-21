@@ -28,3 +28,43 @@
 .slide{
     display: flex;
 }
+.buttin{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+    margin: auto; 
+
+
+position: absolute;
+  top: 70%;
+  left: 50.8%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  
+  color: white;
+  
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.buttin>div{
+    width: 50px;
+    
+}
+.buttin>div>button{
+    font-size: 25px;
+}
+.slide{
+    width: 100%;
+
+}
+.slide>img{
+    margin-top: 40px;
+    width: 95%;
+    height: 500px;
+    margin: auto;
+}
+.my{
+    margin-top: 150px;
+}
