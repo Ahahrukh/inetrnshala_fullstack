@@ -1,12 +1,13 @@
 const express=require('express')
 const app=express()
+const cors=require('cors')
 const connection=require('./config/connection')
 const userRouter=require('./routes/user.route')
 const jobRouter=require("./routes/job.route")
 const myjobRouter = require('./routes/student.route')
 const resumeRouter = require('./routes/resume.route')
 app.use(express.json())
-
+app.use(cors())
 app.get("/",(req,res)=>{
     res.send("Home page")
 })

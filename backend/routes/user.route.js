@@ -7,7 +7,7 @@ userRouter.post("/register",async (req,res)=>{
     const newuser=new userModel({role,name,email,password})
     await newuser.save()
     console.log("registerd")
-    res.send(newuser)
+    res.send({"message":newuser})
 })
 
 userRouter.post("/login",async(req,res)=>{
@@ -15,7 +15,7 @@ userRouter.post("/login",async(req,res)=>{
     const x=await userModel.findOne({email})
      if(x.password===password){
         var t = jwt.sign({ email: x.email}, 'shhhhh');
-        res.send({"token":t,"Role":x.role})
+        res.send({"token":t,"role":x.role})
      }
      
 
