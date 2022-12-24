@@ -1,6 +1,12 @@
 import React from 'react'
+import { useContext } from 'react'
+import { useState } from 'react'
+import { TodoContext } from '../../context/Context'
 import './navbar.css'
 const Navbar = () => {
+   
+    let {handleChange,handleLog}=useContext(TodoContext)
+   
   return (
    <div className='main'>
     <div className="first">
@@ -38,10 +44,10 @@ const Navbar = () => {
             </select>
         </div>
         <div>
-            <button className='login'>Login</button>
+            <button className='login' onClick={()=>{handleLog()}}>Login</button>
         </div>
         <div>
-            <button className='reg'>Register
+            <button className='reg' onClick={()=>{handleChange()}} >Register
                
             </button>
         </div>

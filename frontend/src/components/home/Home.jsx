@@ -4,10 +4,13 @@ import Part2 from './Part2'
 import Part3 from './Part3'
 import './navbar.css'
 import Part4 from './Part4'
+
 const Home = () => {
+  
   return (
     <div>
         <Navbar/>
+        
         <Part2/>
         <div className='section1'>
           <h2>Jobs</h2>

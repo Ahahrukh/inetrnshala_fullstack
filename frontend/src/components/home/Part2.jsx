@@ -1,11 +1,16 @@
-import React from 'react'
-import { useEffect } from 'react'
+import React, { useContext } from 'react'
+
 
 import { useState } from 'react'
+import { TodoContext } from '../../context/Context'
+import Login from './Login'
 import './Part2.css'
+import Signup from './Signup'
 const Part2 = () => {
+  var {tag,log}=useContext(TodoContext)
   let [i,seti]=useState(0)
-  
+   
+
   const imag=[
     
       "https://internshala.com/static/images/home/specializations/fsd.png"
@@ -30,7 +35,7 @@ const Part2 = () => {
   function incriment(){
     if(i<4){
       seti(i+1)
-    }else if(i==4){
+    }else if(i===4){
       seti(i=0)
     }
     clearInterval(inrt)
@@ -59,7 +64,11 @@ const Part2 = () => {
            
             
         </div>
-        <div className='buttin'>
+        {tag?<Signup/>
+            :<div className='jogin'>niklo</div>}
+            
+        {log?<Login/>:<div className='jogin'>niklo</div>}
+        <div className="buttin">
                 <div><button onClick={()=>
                    decriment()
                 }>{x}</button></div>

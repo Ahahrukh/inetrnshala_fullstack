@@ -10,6 +10,7 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
+
 .second{
     display: flex;
     width: 50%;
@@ -18,6 +19,7 @@
 .first{
     width: 30%;
 }
+
 select{
     border: none;
     background-color: rgb(161, 119, 201);
@@ -58,4 +60,10 @@ select{
 .main{
     position: fixed;
     margin-top: -150px;
+}
+.second>div:hover{
+    color: brown;
+}
+.second>div>button:hover{
+    color: brown;
 }
