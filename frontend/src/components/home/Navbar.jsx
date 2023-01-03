@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import { useState } from 'react'
+//import { useState } from 'react'
 import { TodoContext } from '../../context/Context'
 import './navbar.css'
 const Navbar = () => {
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <option value=""></option>
             </select>
         </div>
-        <div>
+        <div >
             <button className='login' onClick={()=>{handleLog()}}>Login</button>
         </div>
         <div>
