@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import Part2 from './Part2'
 import Part3 from './Part3'
-import './navbar.css'
+import '../styles/navbar.css'
 import Part4 from './Part4'
 
 const Home = () => {

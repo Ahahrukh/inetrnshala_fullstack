@@ -4,7 +4,7 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { TodoContext } from '../../context/Context'
 import Login from './Login'
-import './Part2.css'
+import '../styles/Part2.css'
 import Signup from './Signup'
 const Part2 = () => {
   var {tag,log}=useContext(TodoContext)

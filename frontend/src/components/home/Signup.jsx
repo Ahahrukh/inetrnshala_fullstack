@@ -2,7 +2,7 @@ import React from 'react'
 // import { useContext } from 'react'
 import { useState } from 'react'
 // import { TodoContext } from '../../context/Context'
-import './Part2.css'
+import '../styles/Part2.css'
 const Signup = () => {
    
     const [role,setrole]=useState("")

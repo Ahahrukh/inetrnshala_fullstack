@@ -1,5 +1,5 @@
 import React from 'react'
-import './Part2.css'
+import '../styles/Part2.css'
 import { useState } from 'react'
 import {  useNavigate } from 'react-router-dom'
 import Student from '../student/Student'

@@ -1,0 +1,86 @@
+/* Create jobs part css */
+.sain{
+    width: 80%;
+    margin: auto;
+   border-radius: 8px;
+    margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sain>form>input{
+    width: 500px;
+    margin-top: 30px;
+    margin-left: 30px;
+    height: 30px;
+    font-size: 20px;
+}
+.sain>form>input:hover{
+    background-color: rgb(41,183,226);
+    border-radius: 8px;
+    border: none;
+}
+.sain>form>button{
+    width: 500px;
+    margin-top: 23px;
+    margin-left: 570px;
+    height: 40px;
+    font-size: 30px;
+    color: white;
+    border-radius: 8px;
+    background-color: rgb(41, 183, 226);
+    border: none;
+}
+.sain>h1{
+    margin-left: 450px; 
+    color: rgb(41, 183, 226);
+}
+
+
+/* AdminJobs part css  */
+
+.job{
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 8%;
+    
+    border: 1px solid red;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+}
+.job>div:nth-child(1){
+    width: 90%;
+    margin: auto;
+}
+
+.job>div:nth-child(2){
+    width: 50%;
+    margin: auto;
+    height: 30px;
+    
+    
+}
+.job>div:nth-child(2)>button{
+   background-color:  rgb(41, 183, 226);
+   width: 60px;
+   height: 30px;
+   border: none;
+   border-radius: 8px; 
+}
+.job>div:nth-child(2)>button:hover{
+    color: white;
+}
+.job>div:nth-child(2)>button:nth-child(2){
+    margin-left: 40px;
+}
+
+.allJob{
+   
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(3,350px);
+    grid-template-columns:repeat(3,350px) ;
+    gap: 30px;
+}

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Part3.css'
+import '../styles/Part3.css'
 const Part4 = () => {
   return (
     <>

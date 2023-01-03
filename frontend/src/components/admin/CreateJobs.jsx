@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import '../styles/admin.css'
 const CreateJobs = () => {
     const [n,setn]=useState("")
   const [p,setp]=useState("")
@@ -38,7 +39,8 @@ const CreateJobs = () => {
   
   return (
     <div>
-        <div>
+        <div className='sain'>
+           <h1 >Create Jobs</h1>
             <form onSubmit={(e)=>{handleSubmitt(e)}}>
               <input type="text" placeholder='Enter Company Name' value={n} onChange={(e)=>setn(e.target.value)} />
               <input type="text" placeholder='Enter Profile' value={p} onChange={(e)=>setp(e.target.value)}/>
