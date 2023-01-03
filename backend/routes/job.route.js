@@ -9,12 +9,12 @@ jobRouter.post("/create",authentication,authorisation(["admin"]),async(req,res)=
     await jobmodel.save();
     res.send(jobmodel)
 })
-jobRouter.get("/jobs",authentication,authorisation(["admin","student"]),async(req,res)=>{
+jobRouter.get("/jobs/:name",authentication,authorisation(["admin"]),async(req,res)=>{
     //let jobmodel=await jobModel.find()
-    let {location,tech,profile}=req.query
-    let jobmodel= await jobModel.find({tech:tech}).find({location:location}).find({profile:profile})
+    let {name}=req.params
+    let jobmodel= await jobModel.find({owner_name:name})
     res.send(jobmodel)
-    //console.log(req.query)
+    //console.log(req.params)
 })
 jobRouter.delete("/delete/:id",authentication,authorisation(["admin"]),async(req,res)=>{
     let {id}=req.params

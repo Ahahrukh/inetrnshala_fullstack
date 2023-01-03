@@ -15,7 +15,9 @@ userRouter.post("/login",async(req,res)=>{
     const x=await userModel.findOne({email})
      if(x.password===password){
         var t = jwt.sign({ email: x.email}, 'shhhhh');
-        res.send({"token":t,"role":x.role})
+        res.send({"token":t,"role":x.role,"name":x.name})
+        // console.log(x)
+        // console.log(x.password)
      }
      
 
