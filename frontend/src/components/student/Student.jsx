@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 const Student = () => {
-  const [arr,setArr]=useState("")
+  const [data,setData]=useState("")
   return (
     <div>Student</div>
   )
