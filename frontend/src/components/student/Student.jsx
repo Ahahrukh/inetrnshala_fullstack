@@ -4,11 +4,11 @@ import { useState } from 'react'
 
 const Student = () => {
   const [data,setData]=useState("")
-  useEffect(()=>{
-    
-  },[])
+ 
   return (
-    <div>Student</div>
+    <div>
+      <div><h1>Tjis isis</h1></div>
+    </div>
   )
 }
 
