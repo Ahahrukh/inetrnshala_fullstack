@@ -4,13 +4,14 @@ import Part2 from './Part2'
 import Part3 from './Part3'
 import '../styles/navbar.css'
 import Part4 from './Part4'
+import Navbar2 from './Navbar2'
 
 const Home = () => {
-  
+  var flag=localStorage.getItem("role")
   return (
     <div>
+        {/* {flag?<Navbar2/>:<Navbar/>} */}
         <Navbar/>
-        
         <Part2/>
         <div className='section1'>
           <h2>Jobs</h2>

@@ -12,6 +12,7 @@ const Navbar2 = () => {
         localStorage.clear()
         navigator("/")
     }
+    var flag=localStorage.getItem("role")
   return (
     <div className='ain'>
     <div className="irst">
@@ -19,12 +20,15 @@ const Navbar2 = () => {
        <h1 className='walla'>Wallah</h1>
     </div>
     <div className='econd'>
-        <div><button className='ieg'c onClick={()=>handleAdminJob()} >All jobs</button>
+        <div>{flag=="admin"?<button className='ieg'c onClick={()=>handleAdminJob()} >All jobs</button>:
+        
+        <button className='ieg'c onClick={()=>handleAdminJob()} >Aplied jobs</button>}
             
         </div>
         
-        <div><button className='ieg' onClick={()=>handleCreate()}>Create jobs</button>
-            
+        <div>
+            {flag=="admin"?<button className='ieg' onClick={()=>handleCreate()}>CreateJobs</button>:
+            <button className='ieg' onClick={()=>handleCreate()}>Find jobs</button>}
         </div>
         <div >
             <button className='sogin' onClick={()=>handleLogout()} ><Link to="/">Logout</Link></button>
