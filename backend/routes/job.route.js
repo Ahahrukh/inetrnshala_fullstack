@@ -16,6 +16,10 @@ jobRouter.get("/jobs/:name",authentication,authorisation(["admin"]),async(req,re
     res.send(jobmodel)
     //console.log(req.params)
 })
+jobRouter.get("/alljobs",authentication,authorisation(["student"]),async(req,res)=>{
+    let jobsall=await jobModel.find()
+    res.send(jobsall)
+})
 jobRouter.delete("/delete/:id",authentication,authorisation(["admin"]),async(req,res)=>{
     let {id}=req.params
     let jobmodel=await jobModel.deleteOne({"_id":id})
