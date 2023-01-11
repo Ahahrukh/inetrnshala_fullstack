@@ -8,7 +8,9 @@ const Student = () => {
   return (
     <div>
       <div>
-        <H1>Students page here i will fetch data</H1>
+        <div>
+          data
+        </div>
       </div>
     </div>
   )
